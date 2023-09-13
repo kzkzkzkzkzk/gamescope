@@ -5278,12 +5278,6 @@ handle_property_notify(xwayland_ctx_t *ctx, XPropertyEvent *ev)
 			int width = xwayland_mode_ctl[ 1 ];
 			int height = xwayland_mode_ctl[ 2 ];
 
-			if ( g_nOutputWidth != 1280 && width == 1280 )
-			{
-				width = g_nOutputWidth;
-				height = g_nOutputHeight;
-			}
-
 			bool allowSuperRes = !!xwayland_mode_ctl[ 3 ];
 
 			if ( !allowSuperRes )
